@@ -50,9 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             if (finalizado == true) {
                               tarefas[index].finalizar();
                             } else {
-
                               tarefas[index].iniciar();
-                            
                           }
                         });
                         
@@ -69,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const AddTaskScreen(),
+            Navigator.push(context, MaterialPageRoute(builder: (context) =>  AddTaskScreen(),
             ),
             );
           },

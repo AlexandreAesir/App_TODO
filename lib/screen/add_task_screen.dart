@@ -3,7 +3,18 @@
 import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatelessWidget {
-  const AddTaskScreen({super.key});
+   AddTaskScreen({super.key});
+
+final titulocontroller = TextEditingController();
+final descricaocontroller = TextEditingController();
+
+void salvar(){
+
+}
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +24,30 @@ class AddTaskScreen extends StatelessWidget {
         ),
     body: Column(
       children: [Padding(padding: EdgeInsetsGeometry.all(16),
-      child: TextField(
+      child: TextFormField(
           decoration: InputDecoration(
-            border: OutlineInputBorder(), hintText: "Titulo da Tarefa", label: Text("Título")
-            
-          ), 
+            border: OutlineInputBorder(), label: Text("Título"),
+          floatingLabelBehavior: FloatingLabelBehavior.always
+         
+          ),
+           controller: titulocontroller,
         ),
         ),
 
         Padding(padding: EdgeInsetsGeometry.all(16),
-       child: TextField(
+       child: TextFormField(
           decoration: InputDecoration(
-            border: OutlineInputBorder(), hintText: "Descrição", label: Text("Descrição")
+            border: OutlineInputBorder(), label: Text("Descrição"),
+            floatingLabelBehavior: FloatingLabelBehavior.always
             ),
+            controller: descricaocontroller,
             ),
-       )
+       ),
+       Padding(padding: const EdgeInsets.all(16.0),
+       child: FilledButton(onPressed: salvar, child: SizedBox(height: 60, width: double.infinity, child: Center(child: Text("Salvar"),)  ),))
        
       ],
+      
 
     ),
     
