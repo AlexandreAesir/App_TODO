@@ -1,21 +1,17 @@
-
 class Tarefa {
   int id;
   String titulo;
   String descricao;
-  bool finalizado = false;
+  bool finalizada = false;
+
   Tarefa(this.id, this.titulo, this.descricao);
 
-
-
   void finalizar(){
-finalizado = true;
-
+    finalizada = true;
   }
 
-
   void iniciar(){
-    finalizado = false;
+    finalizada = false;
   }
 
 }

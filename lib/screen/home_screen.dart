@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: tarefas.length,
                 itemBuilder: (context, index) => Card(
                   child: ListTile(
-                    leading: Checkbox(value: tarefas[index].finalizado,
+                    leading: Checkbox(value: tarefas[index].finalizada,
                      onChanged:(finalizado){
                         setState(() {
                             if (finalizado == true) {

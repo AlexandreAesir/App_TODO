@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_terca/screen/home_screen.dart';
-
+import 'package:todo_terca/screens/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +10,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: AppBarTheme(
